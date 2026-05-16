@@ -1,0 +1,18 @@
+{
+  "voice_family": "V2 — Intellectual Editorial",
+  "hero_h1": ["Brands, written", "before they're drawn."],
+  "hero_subhead": "Vellum & Vine builds identities for premium consumer brands — beginning with the words, then the type, then everything the eye reaches after.",
+  "manifesto": "Typography is not decoration. It is the brand speaking before anyone has read a word.",
+  "cta_primary": "Start a project",
+  "cta_secondary": "See selected work",
+  "invented_specifics": [
+    "Studio of four — implied scale, presented as a working principle, owner to confirm.",
+    "Six representative Work projects — typological placeholders for a portfolio the owner fills in.",
+    "Bairro Alto, Lisbon — plausible studio district; owner to confirm exact address."
+  ],
+  "quality_gates": {
+    "ban_word_scan": "pass — no V2 banned words (no 'premium' as claim, no 'empowering/transforming', no 'simple/easy/effortless' as selling points)",
+    "specificity": "pass — hero and body reference Lisbon, the founding year, named disciplines and materials",
+    "voice_match": "pass — reads as sibling of voice-bank V2 fashion-editorial example"
+  }
+}

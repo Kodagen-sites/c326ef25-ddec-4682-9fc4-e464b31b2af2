@@ -1,0 +1,47 @@
+{
+  "generation_id": "gen-2026-05-16-vellum-and-vine",
+  "company": "Vellum & Vine",
+  "industry": "design-studio",
+  "archetype": "F",
+  "archetype_reason": "Type Editorial — the studio brief states writing and typography ARE the product.",
+  "style": "S6",
+  "voice": "V2",
+  "scene_variant": "V2",
+  "motion_variant": "editorial",
+  "card_variant": "CV2",
+  "hero_text_pattern": "H1",
+  "hero_entrance": "word-rise",
+  "header_variant": "center-logo-split",
+  "footer_variant": "FT2",
+  "contact_variant": "CT3",
+  "about_variant": "AB4",
+  "cta_variant": "CTA1",
+  "work_variant": "WK1",
+  "stats_variant": null,
+  "testimonials_variant": null,
+  "pdp_variant": null,
+  "shop_variant": null,
+  "featured_products_variant": null,
+  "color_variant": "ink-on-vellum / oxblood-wine accent",
+  "color_profile": {
+    "luminance": "light",
+    "bg_tones": ["#F2EDE3", "#16130E", "#E4D8C6", "#2A1416"],
+    "text": {
+      "ink": "#16130E",
+      "paper": "#F2EDE3",
+      "muted": "#5C5347",
+      "accent": "#7C2D33"
+    },
+    "tone_modifier": "editorial"
+  },
+  "fonts": {
+    "display": "Fraunces",
+    "body": "Inter",
+    "mono": "JetBrains Mono"
+  },
+  "asset_mode": "prompt-only",
+  "build_mode": "landing-only",
+  "hero_technique": "T7 typographic + T4 still field",
+  "rolled_at": "2026-05-16T05:00:00Z",
+  "notes": "Industry gate misdetected 'retail'; Vellum & Vine is a creative services agency with no products — no cart flow scaffolded."
+}
