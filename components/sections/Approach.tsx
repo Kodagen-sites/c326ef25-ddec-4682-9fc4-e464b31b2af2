@@ -1,5 +1,4 @@
 import { siteConfig } from "@/content/site-config";
-import { resolveImage } from "@/lib/image-fallback";
 import FadeUp from "@/components/motion/FadeUp";
 import TextReveal from "@/components/motion/TextReveal";
 import ImageRevealMask from "@/components/motion/ImageRevealMask";
@@ -10,11 +9,8 @@ import ImageRevealMask from "@/components/motion/ImageRevealMask";
  */
 export default function Approach() {
   const { approach } = siteConfig;
-  const image = resolveImage({
-    industry: "agency",
-    keyword: "editorial design studio",
-    brandColor: "#4A1F22",
-  });
+  const image =
+    "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images/section-about.jpg";
 
   return (
     <section className="bg-clay text-ink">

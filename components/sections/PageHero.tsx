@@ -23,10 +23,11 @@ export default function PageHero({ eyebrow, title, image, intro }: PageHeroProps
         src={image}
         alt=""
         aria-hidden
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 h-full w-full object-cover"
       />
-      {/* Vellum wash — keeps the field soft and the ink type legible. */}
-      <div className="absolute inset-0 bg-gradient-to-t from-paper via-paper/80 to-paper/55" />
+      {/* Vellum wash — strong at the base where the ink type sits, light
+          up top so the photograph clearly reads. */}
+      <div className="absolute inset-0 bg-gradient-to-t from-paper via-paper/60 to-paper/15" />
 
       <div className="relative w-full px-5 pb-14 pt-44 md:px-10 md:pb-20 md:pt-48">
         <div className="mx-auto max-w-[1320px]">

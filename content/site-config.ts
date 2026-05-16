@@ -87,6 +87,8 @@ export const siteConfig = {
 
   hero: {
     eyebrow: "Branding & design — Lisbon",
+    videoUrl:
+      "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/videos/final.mp4",
     h1: [{ text: "Brands, written" }, { text: "before they're drawn." }],
     subhead:
       "Vellum & Vine builds identities for premium consumer brands — beginning with the words, then the type, then everything the eye reaches after.",

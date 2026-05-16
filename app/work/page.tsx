@@ -13,12 +13,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "/work" },
 };
 
+const WORK_ASSET_BASE =
+  "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images";
+const WORK_IMAGES = [
+  `${WORK_ASSET_BASE}/section-showcase-1.jpg`,
+  `${WORK_ASSET_BASE}/section-showcase-2.jpg`,
+  `${WORK_ASSET_BASE}/section-showcase-3.jpg`,
+  `${WORK_ASSET_BASE}/section-showcase-4.jpg`,
+  `${WORK_ASSET_BASE}/section-process.jpg`,
+  `${WORK_ASSET_BASE}/section-services.jpg`,
+];
+
 export default function WorkPage() {
-  const heroImage = resolveImage({
-    industry: "agency",
-    keyword: "editorial portfolio",
-    brandColor: "#E4D8C6",
-  });
+  const heroImage =
+    "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images/section-showcase-1.jpg";
 
   return (
     <>
@@ -33,11 +41,7 @@ export default function WorkPage() {
         <div className="shell section-pad">
           <div className="grid gap-x-10 gap-y-16 md:grid-cols-2">
             {siteConfig.work.map((item, i) => {
-              const image = resolveImage({
-                industry: "agency",
-                keyword: `${item.slug} brand`,
-                brandColor: "#7C2D33",
-              });
+              const image = WORK_IMAGES[i % WORK_IMAGES.length];
               return (
                 <FadeUp key={item.slug} delay={(i % 2) * 0.1}>
                   <article className="group">

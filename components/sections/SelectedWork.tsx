@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { siteConfig } from "@/content/site-config";
-import { resolveImage } from "@/lib/image-fallback";
 import FadeUp from "@/components/motion/FadeUp";
 import CardTiltLayer from "@/components/motion/CardTiltLayer";
+
+const ASSET_BASE =
+  "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images";
+const WORK_IMAGES = [
+  `${ASSET_BASE}/section-showcase-1.jpg`,
+  `${ASSET_BASE}/section-showcase-2.jpg`,
+  `${ASSET_BASE}/section-showcase-3.jpg`,
+  `${ASSET_BASE}/section-showcase-4.jpg`,
+];
 
 /**
  * SelectedWork — editorial work mosaic on oxblood-dark (tone 4).
@@ -41,11 +49,7 @@ export default function SelectedWork() {
 
         <div className="grid gap-x-8 gap-y-12 md:grid-cols-2">
           {items.map((item, i) => {
-            const image = resolveImage({
-              industry: "agency",
-              keyword: `${item.slug} editorial`,
-              brandColor: "#7C2D33",
-            });
+            const image = WORK_IMAGES[i % WORK_IMAGES.length];
             return (
               <FadeUp key={item.slug} delay={i * 0.1}>
                 <Link href="/work" className="group block">

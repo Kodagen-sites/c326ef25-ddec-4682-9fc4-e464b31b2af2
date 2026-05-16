@@ -32,11 +32,8 @@ const principles = [
 ];
 
 export default function AboutPage() {
-  const heroImage = resolveImage({
-    industry: "agency",
-    keyword: "design studio lisbon",
-    brandColor: "#E4D8C6",
-  });
+  const heroImage =
+    "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images/section-about.jpg";
 
   return (
     <>

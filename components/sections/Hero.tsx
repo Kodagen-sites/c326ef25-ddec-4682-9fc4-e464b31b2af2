@@ -4,29 +4,42 @@ import MagneticButton from "@/components/motion/MagneticButton";
 import ScrollHint from "@/components/motion/ScrollHint";
 
 /**
- * Hero — Archetype F (Type Editorial). Typography is the hero: a two-line
- * giant manifesto on vellum, no video. Words ARE the product.
+ * Hero — Archetype F. A full-bleed background video carries the cinematic;
+ * the editorial typography sits over it. The scroll-scrub frame moment is
+ * not here — it lives in the "What we do" section below.
  */
 export default function Hero() {
   const { hero } = siteConfig;
 
   return (
-    <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-paper">
-      {/* quiet typographic backdrop — oversized monogram, barely there */}
-      <span
+    <section className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden bg-ink">
+      {/* full-bleed background video */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        src={hero.videoUrl}
+        autoPlay
+        loop
+        muted
+        playsInline
         aria-hidden
-        className="pointer-events-none absolute -right-[6vw] top-[8vh] select-none font-display text-[42vw] font-light italic leading-none text-ink/[0.035]"
-      >
-        &amp;
-      </span>
+      />
+      {/* legibility scrim */}
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(20,18,16,0.58) 0%, rgba(20,18,16,0.30) 42%, rgba(20,18,16,0.80) 100%)",
+        }}
+      />
 
       <div className="shell relative w-full pb-20 pt-40 md:pb-28 md:pt-48">
-        <div className="mb-9 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.26em] text-accent">
-          <span className="inline-block h-px w-12 bg-accent" />
+        <div className="mb-9 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.26em] text-paper/70">
+          <span className="inline-block h-px w-12 bg-paper/50" />
           {hero.eyebrow}
         </div>
 
-        <h1 className="font-display font-light tracking-editorial text-ink">
+        <h1 className="font-display font-light tracking-editorial text-paper">
           <TextReveal
             as="span"
             className="block text-[clamp(48px,10.5vw,168px)] leading-[0.96]"
@@ -36,17 +49,17 @@ export default function Hero() {
           <TextReveal
             as="span"
             delay={0.18}
-            className="block text-[clamp(48px,10.5vw,168px)] italic leading-[0.96] text-accent"
+            className="block text-[clamp(48px,10.5vw,168px)] italic leading-[0.96] text-paper/80"
           >
             {hero.h1[1].text}
           </TextReveal>
         </h1>
 
         <div className="mt-12 grid gap-10 md:grid-cols-[1.1fr_1fr] md:items-end">
-          <p className="max-w-[34ch] font-display text-xl font-light leading-snug text-ink md:text-2xl">
+          <p className="max-w-[34ch] font-display text-xl font-light leading-snug text-paper md:text-2xl">
             {hero.subhead}
           </p>
-          <p className="max-w-[44ch] text-sm leading-relaxed text-ink-muted md:text-base">
+          <p className="max-w-[44ch] text-sm leading-relaxed text-paper/65 md:text-base">
             {hero.body}
           </p>
         </div>
@@ -55,15 +68,15 @@ export default function Hero() {
           <MagneticButton
             as="a"
             href={hero.ctaPrimary.href}
-            className="rounded-none bg-ink px-9 py-4 font-mono text-[11px] uppercase tracking-[0.24em] text-paper transition-colors duration-300 hover:bg-accent"
+            className="rounded-none bg-paper px-9 py-4 font-mono text-[11px] uppercase tracking-[0.24em] text-ink transition-colors duration-300 hover:bg-accent hover:text-paper"
           >
             {hero.ctaPrimary.label}
           </MagneticButton>
           <a
             href={hero.ctaSecondary.href}
-            className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.24em] text-ink"
+            className="group inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.24em] text-paper"
           >
-            <span className="border-b border-ink/30 pb-1 transition-colors group-hover:border-accent group-hover:text-accent">
+            <span className="border-b border-paper/40 pb-1 transition-colors group-hover:border-accent">
               {hero.ctaSecondary.label}
             </span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -72,14 +85,14 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-20 flex flex-wrap gap-x-10 gap-y-3 border-t border-ink/12 pt-7 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/45">
+        <div className="mt-20 flex flex-wrap gap-x-10 gap-y-3 border-t border-paper/15 pt-7 font-mono text-[10px] uppercase tracking-[0.22em] text-paper/45">
           <span>{siteConfig.contact.area}</span>
           <span>Est. {siteConfig.company.foundedYear}</span>
           <span>Brand identity · Packaging · Art direction · Editorial</span>
         </div>
       </div>
 
-      <ScrollHint label="Read on" accentColor="#7C2D33" />
+      <ScrollHint label="Read on" accentColor="#F4ECE0" />
     </section>
   );
 }

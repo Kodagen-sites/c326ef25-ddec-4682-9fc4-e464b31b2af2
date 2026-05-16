@@ -39,11 +39,8 @@ export default async function ServiceDetailPage({
 
   const others = siteConfig.services.filter((s) => s.slug !== slug);
   const index = siteConfig.services.findIndex((s) => s.slug === slug);
-  const heroImage = resolveImage({
-    industry: "agency",
-    keyword: `${service.slug} design`,
-    brandColor: "#E4D8C6",
-  });
+  const heroImage =
+    "https://zykgxmubadvmlxpkqrzd.supabase.co/storage/v1/object/public/site-assets/37f18796-6068-4f64-9e89-5f1820e67ef1/images/section-showcase-3.jpg";
 
   return (
     <>
